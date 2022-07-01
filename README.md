@@ -1,51 +1,9 @@
 # ECaterer
 
-## Stan projektu na 05.04.2022
+E-Catering service created with ASP.NET Core backend and Angular frontend in team of 5 during my studies. I was responsible for the backend of application (project WebApi) and integration tests.
 
-* Dodane mockup'y widoków aplikacji klienta, producenta oraz dostawcy
-* Stworzony projekt do bazy danych ECaterer.Core z modelami oraz migracjami
-* Stworzony projekt do front-end'u ECaterer.Web
-* Stworzony project do testowania ECaterer.Web.Test z testami do api klienta (do tego zostały stworzone niezaimplementowane funkcje kontrolera klienta i klasy DTO)
-* Stworzony bazowy pipeline
+## Application access
+Part of the application completed during semester should be available by the link: http://eteam.06c45401340e40f5913f.westeurope.aksapp.io/
 
-## Dostęp do aplikacji
-Aplikacja dostępna jest pod adresem: http://eteam.06c45401340e40f5913f.westeurope.aksapp.io/
-
-## Budowanie bazy i migracje
-
-## Odpalenie docker composa
-W głównym folderze projektu wywołać komendę `docker-compose up`
-
-### Local development
-
-Aktualizacja bazy do ostatniej migracji:
-
-```
-dotnet ef database update
-```
-
-Aktualizacja bazy do danej migracji (ewentualnie rollback):
-
-```
-dotnet ef database update [migration]
-```
-
-### Generacja skryptu SQL (dla "production database")
-
-Od pustej bazy do ostatniej migracji:
-
-```
-dotnet ef migrations script
-```
-
-Od danej migracji do ostatniej migracji:
-
-```
-dotnet ef migrations script [migration]
-```
-
-Od migracji "from" bazy do migracji "to" (jeśli migracja "from" będzie nowsza od migracji "to", to zostanie wygenerowany skrypt rollback):
-
-```
-dotnet ef migrations script [migrationFrom] [migrationTo]
-```
+## Docker compose launch
+In the main project folder run `docker-compose up`
